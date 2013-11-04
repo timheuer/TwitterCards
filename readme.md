@@ -6,7 +6,7 @@ This is a quick and dirty implementation for adding Twitter Summary Cards suppor
 See this post for more details: [http://timheuer.com/blog/archive/2013/11/03/adding-twitter-summary-cards-to-blog-content.aspx](http://timheuer.com/blog/archive/2013/11/03/adding-twitter-summary-cards-to-blog-content.aspx)
 
 ## Installation
-- Build this project
+- Build this project.  Please note this requires references to Subtext.Web and Subtext.Framework which aren't included in this project and is assumed you know how to get those.
 - Take the output TwitterCards.dll and put it in your /bin directory of your Subtext 2.5.2 installation
 - In your web.config in the pages\controls section add:
 
