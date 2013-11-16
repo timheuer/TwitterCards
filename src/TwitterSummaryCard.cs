@@ -32,9 +32,12 @@ namespace TwitterCards
                     string description = entry.HasDescription ? entry.Description : entry.Body;
 
                     summaryTitleMeta.Content = title;
-                    var maxLen = (description.Length > 180) ? 180 : description.Length;
-                    var cleanedDescription = 
+
+                    var cleanedDescription =
                         HttpUtility.HtmlDecode(Regex.Replace(description, "<[^>]*(>|$)", string.Empty));
+
+                    var maxLen = (cleanedDescription.Length > 180) ? 180 : cleanedDescription.Length;
+
                     descriptionMeta.Content = cleanedDescription.Substring(0, maxLen) + "...";
                 }
                 else
